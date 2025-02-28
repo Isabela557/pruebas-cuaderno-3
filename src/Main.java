@@ -1,43 +1,33 @@
-import ejercicios.e1.Circle;
-import ejercicios.e1.Cylinder ;
+import ejercicios.e2.Person;
+import ejercicios.e2.Staff;
+import ejercicios.e2.Student;
 
 public class Main {
     public static void main(String[] args) {
-        // Crear círculos con diferentes constructores
-        Circle circle1 = new Circle();
-        Circle circle2 = new Circle(5.0);
-        Circle circle3 = new Circle(7.5, "blue");
+        // Crear un objeto de la clase Person
+        Person person = new Person("Juan Perez", "Av. Siempre Viva 123");
+        System.out.println(person); // Se llama a toString()
 
-        // Imprimir información de los círculos
-        System.out.println("Círculo 1: " + circle1);
-        System.out.println("Área del círculo 1: " + circle1.getArea());
+        // Crear un objeto de la clase Student
+        Student student = new Student("Maria Gomez", "Calle Falsa 456", "Ingeniería", 2, 1500.50);
+        System.out.println(student); // Se llama a toString()
 
-        System.out.println("Círculo 2: " + circle2);
-        System.out.println("Área del círculo 2: " + circle2.getArea());
+        // Modificar valores del estudiante
+        student.setProgram("Matemáticas");
+        student.setYear(3);
+        student.setFee(2000.75);
+        System.out.println("Programa actualizado: " + student.getProgram());
+        System.out.println("Año actualizado: " + student.getYear());
+        System.out.println("Cuota actualizada: " + student.getFee());
 
-        System.out.println("Círculo 3: " + circle3);
-        System.out.println("Área del círculo 3: " + circle3.getArea());
+        // Crear un objeto de la clase Staff
+        Staff staff = new Staff("Carlos Ruiz", "Paseo del Prado 789", "Escuela Primaria", 2500.00);
+        System.out.println(staff); // Se llama a toString()
 
-        // Modificar propiedades de un círculo
-        circle1.setRadius(3.0);
-        circle1.setColor("green");
-
-        System.out.println("Círculo 1 modificado: " + circle1);
-        System.out.println("Nueva área del círculo 1: " + circle1.getArea());
-
-        // Crear cilindros con diferentes constructores
-        Cylinder cylinder1 = new Cylinder();
-        Cylinder cylinder2 = new Cylinder(10.0);
-        Cylinder cylinder3 = new Cylinder(4.0, 12.0);
-
-        // Imprimir información de los cilindros
-        System.out.println("Cilindro 1: " + cylinder1);
-        System.out.println("Volumen del cilindro 1: " + cylinder1.getVolume());
-
-        System.out.println("Cilindro 2: " + cylinder2);
-        System.out.println("Volumen del cilindro 2: " + cylinder2.getVolume());
-
-        System.out.println("Cilindro 3: " + cylinder3);
-        System.out.println("Volumen del cilindro 3: " + cylinder3.getVolume());
+        // Modificar valores del staff
+        staff.setSchool("Colegio Nacional");
+        staff.setPay(3000.25);
+        System.out.println("Escuela actualizada: " + staff.getSchool());
+        System.out.println("Pago actualizado: " + staff.getPay());
     }
 }
